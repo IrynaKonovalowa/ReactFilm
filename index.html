@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href ="styles.css" rel="stylesheet">
+    <title>Wonka</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="app"></div>
+    <script type="text/babel" src="Film.jsx">
+    </script>
+    <script type="text/babel" src="FilmInfo.jsx">
+    </script>
+    
+    <script type="text/babel">
+        const propsValues = {
+        title: "Wonka",
+        path: "/Wonka.jpg",
+        filmmaker: "Paul King",
+        year: "2023",
+        country: " États-Unis, Royaume-Uni",
+        genre: "Aventure",
+        acteurs: "Timothée Chalamet, Calah Lane, Hugh Grant, Keegan-Michael Key, Paterson Joseph",
+        info: "Le jeune Willy Wonka, extraordinaire inventeur, magicien et chocolatier, tente de mettre en place une boutique de chocolat en ville. Il affronte le cartel des chocolatiers qui voit d'un mauvais oeil son arrivée, alors qu'il se met à créer ses premières friandises uniques au monde tout en rencontrant les Oompa-Loompas."
+        };
+
+        ReactDOM.createRoot(
+            document.getElementById("app")
+        )
+        .render(
+            <React.StrictMode>
+                <Film data={propsValues} />
+            </React.StrictMode>           
+        );
+    </script>
+</body>
+</html>
